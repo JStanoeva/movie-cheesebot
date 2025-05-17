@@ -1,0 +1,66 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBEB; /* Creamy yellow, like a mild cheese */
+        }
+        .chat-bubble {
+            padding: 12px 18px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .user-bubble {
+            background-color: #FDE68A; /* A nice cheddar yellow */
+            color: #78350F; /* Brown for text, good contrast */
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        .bot-bubble {
+            background-color: #FEF3C7; /* Lighter cheese color */
+            color: #9A3412; /* Darker orange/brown for bot text */
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        .bot-bubble.error {
+            background-color: #FECACA; /* Light red for errors */
+            color: #991B1B; /* Dark red for error text */
+        }
+        .movie-card {
+            background-color: #FFFFFF;
+            border: 2px solid #FDBA74; /* Orange border, like aged cheese rind */
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .movie-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #D97706; /* Amber color for titles */
+            margin-bottom: 8px;
+        }
+        .movie-details p {
+            margin-bottom: 6px;
+            color: #4B5563; /* Gray for details */
+        }
+        .movie-details strong {
+            color: #78350F; /* Brown for labels */
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFBEB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FDBA74;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FB923C;
+        }
+        /* Custom focus rings for accessibility and style */
+        input[type="text"]:focus, button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.5); /* Orange glow */
+        }
