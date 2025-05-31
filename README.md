@@ -19,8 +19,8 @@ This isn't just any movie bot; it's your personal movie maître d', ready to ser
 
 1.  **Clone the Repository (or Download the Files):**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/cheesy-movie-bot.git](https://github.com/YOUR_USERNAME/cheesy-movie-bot.git)
-    # Or simply download the HTML file!
+    git clone [https://github.com/JStanoeva/movie-cheesebot.git](https://github.com/JStanoeva/movie-cheesebot.git)
+    # Or simply download the ZIP file!
     ```
 2.  **OMDb API Key:**
     - This bot uses the free OMDb API to fetch movie data.
@@ -40,4 +40,4 @@ This isn't just any movie bot; it's your personal movie maître d', ready to ser
 
 ---
 
-We hope this Cheesy Movie Bot brings a slice of joy and a mountain of movie knowledge to your screen! May your cinematic adventures always be _grate_!
+We hope this Movie Cheesebot brings a slice of joy and a mountain of movie knowledge to your screen! May your cinematic adventures always be _grate_!
