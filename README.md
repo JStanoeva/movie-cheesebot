@@ -19,7 +19,7 @@ This isn't just any movie bot; it's your personal movie maître d', ready to ser
 
 1.  **Clone the Repository (or Download the Files):**
     ```bash
-    git clone [https://github.com/JStanoeva/movie-cheesebot.git](https://github.com/JStanoeva/movie-cheesebot.git)
+    git clone https://github.com/JStanoeva/movie-cheesebot.git
     # Or simply download the ZIP file!
     ```
 2.  **OMDb API Key:**
