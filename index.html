@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-P">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🧀 Cheesy Movie Bot 🎬</title>
+  <head>
+    <meta charset="UTF-P" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Cheesebot</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="flex flex-col items-center justify-center min-h-screen p-4 selection:bg-amber-300 selection:text-amber-900">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.png" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen p-4 selection:bg-amber-300 selection:text-amber-900"
+  >
+    <div
+      class="w-full max-w-2xl bg-white/80 backdrop-blur-md shadow-2xl rounded-xl p-6 md:p-8"
+    >
+      <header class="text-center mb-6">
+        <h1 class="text-4xl font-bold text-amber-600">🧀 Movie Cheesebot 🎬</h1>
+        <p class="text-amber-800 mt-2">
+          Your royal guide to all things cinema... with a sprinkle of cheese!
+        </p>
+      </header>
 
-    <div class="w-full max-w-2xl bg-white/80 backdrop-blur-md shadow-2xl rounded-xl p-6 md:p-8">
-        <header class="text-center mb-6">
-            <h1 class="text-4xl font-bold text-amber-600">🧀 Cheesy Movie Bot 🎬</h1>
-            <p class="text-amber-800 mt-2">Your royal guide to all things cinema... with a sprinkle of cheese!</p>
-        </header>
+      <div
+        id="chat-window"
+        class="h-96 overflow-y-auto mb-4 p-4 bg-amber-50 rounded-lg flex flex-col space-y-3"
+      ></div>
 
-        <div id="chat-window" class="h-96 overflow-y-auto mb-4 p-4 bg-amber-50 rounded-lg flex flex-col space-y-3">
-            </div>
-
-        <div class="flex space-x-3">
-            <input type="text" id="movie-input" class="flex-grow p-3 border-2 border-amber-300 rounded-lg focus:border-amber-500 transition-colors" placeholder="Type a movie title or '🧀'...">
-            <button id="send-button" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
-                Send
-            </button>
-        </div>
+      <div class="flex space-x-3">
+        <input
+          type="text"
+          id="movie-input"
+          class="flex-grow p-3 border-2 border-amber-300 rounded-lg focus:border-amber-500 transition-colors"
+          placeholder="Type a movie title or '🧀'..."
+        />
+        <button
+          id="send-button"
+          class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
+        >
+          Send
+        </button>
+      </div>
     </div>
 
     <footer class="mt-8 text-center text-sm text-amber-700">
-        <p>A *grate* creation for Queen Tora! Powered by OMDb API.</p>
+      <p>A *grate* creation for Queen Tora! Powered by OMDb API.</p>
     </footer>
 
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
