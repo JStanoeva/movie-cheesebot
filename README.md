@@ -24,7 +24,7 @@ This isn't just any movie bot; it's your personal movie maître d', ready to ser
     ```
 2.  **OMDb API Key:**
     - This bot uses the free OMDb API to fetch movie data.
-3.  **Open `cheesy_movie_bot.html`:** Simply open the HTML file in your favorite web browser.
+3.  **Open `index.html`:** Simply open the HTML file in your favorite web browser.
 4.  **Chat Away!** Start typing movie titles or the "🧀" command and enjoy the cinematic, cheesy conversation!
 
 ## 🛠️ Technology Stack - The Cheese-Making Tools
