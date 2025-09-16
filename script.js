@@ -9,6 +9,7 @@
         const apiKey = '24feda60'; 
 
         let isCheeseModeActive = localStorage.getItem('cheeseMode') === 'true'; // Load cheese mode state
+        const cheeseTriggers = ["dY\u0015?", "\uD83E\uDDC0"]; // Support legacy and emoji triggers
 
         // Initial greeting from the bot
         function initialGreeting() {
@@ -90,7 +91,7 @@
                         ${ratingsHTML}
                         <p class="mt-2"><strong>Director:</strong> ${movie.Director || 'N/A'}</p>
                         <p><strong>Actors:</strong> ${movie.Actors || 'N/A'}</p>
-                        ${movie.Poster && movie.Poster !== "N/A" ? `<img src="${movie.Poster}" alt="Poster for ${movie.Title}" class="mt-4 rounded-lg shadow-md max-w-xs mx-auto" onerror="this.style.display='none'">` : ''}
+                        ${movie.Poster && movie.Poster !== "N/A" ? `<img src="${movie.Poster}" alt="Poster for ${movie.Title}" class="mt-4" onerror="this.style.display='none'">` : ''}
                     </div>
                 </div>
             `;
@@ -104,7 +105,7 @@
             addUserMessage(userInput);
             movieInput.value = ''; // Clear input field
 
-            if (userInput === "🧀") {
+            if (cheeseTriggers.includes(userInput)) {
                 isCheeseModeActive = !isCheeseModeActive;
                 localStorage.setItem('cheeseMode', isCheeseModeActive); // Save cheese mode state
                 if (isCheeseModeActive) {

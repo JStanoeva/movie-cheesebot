@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-P" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Cheesebot</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,41 +12,31 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/svg+xml" href="img/favicon.png" />
   </head>
-  <body
-    class="flex flex-col items-center justify-center min-h-screen p-4 selection:bg-amber-300 selection:text-amber-900"
-  >
-    <div
-      class="w-full max-w-2xl bg-white/80 backdrop-blur-md shadow-2xl rounded-xl p-6 md:p-8"
-    >
+  <body class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 selection:bg-amber-300 selection:text-amber-900">
+    <div class="w-full max-w-2xl glass-panel p-6 md:p-8">
       <header class="text-center mb-6">
-        <h1 class="text-4xl font-bold text-amber-600">🧀 Movie Cheesebot 🎬</h1>
-        <p class="text-amber-800 mt-2">
+        <h1 class="text-4xl font-bold text-white drop-shadow-lg">&#129472; Movie Cheesebot &#129472;</h1>
+        <p class="text-amber-100 mt-2">
           Your royal guide to all things cinema... with a sprinkle of cheese!
         </p>
       </header>
 
-      <div
-        id="chat-window"
-        class="h-96 overflow-y-auto mb-4 p-4 bg-amber-50 rounded-lg flex flex-col space-y-3"
-      ></div>
+      <div id="chat-window" class="h-96 overflow-y-auto mb-5"></div>
 
-      <div class="flex space-x-3">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
         <input
           type="text"
           id="movie-input"
-          class="flex-grow p-3 border-2 border-amber-300 rounded-lg focus:border-amber-500 transition-colors"
-          placeholder="Type a movie title or '🧀'..."
+          class="flex-1 min-w-0"
+          placeholder="Type a movie title or '&#129472;'..."
         />
-        <button
-          id="send-button"
-          class="bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg"
-        >
+        <button id="send-button" class="w-full sm:w-auto">
           Send
         </button>
       </div>
     </div>
 
-    <footer class="mt-8 text-center text-sm text-amber-700">
+    <footer class="mt-8 text-center text-sm text-white/90">
       <p>A *grate* creation for Queen Tora! Powered by OMDb API.</p>
     </footer>
 

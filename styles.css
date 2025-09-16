@@ -1,66 +1,207 @@
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFBEB; /* Creamy yellow, like a mild cheese */
-        }
-        .chat-bubble {
-            padding: 12px 18px;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            max-width: 80%;
-            word-wrap: break-word;
-        }
-        .user-bubble {
-            background-color: #FDE68A; /* A nice cheddar yellow */
-            color: #78350F; /* Brown for text, good contrast */
-            align-self: flex-end;
-            border-bottom-right-radius: 5px;
-        }
-        .bot-bubble {
-            background-color: #FEF3C7; /* Lighter cheese color */
-            color: #9A3412; /* Darker orange/brown for bot text */
-            align-self: flex-start;
-            border-bottom-left-radius: 5px;
-        }
-        .bot-bubble.error {
-            background-color: #FECACA; /* Light red for errors */
-            color: #991B1B; /* Dark red for error text */
-        }
-        .movie-card {
-            background-color: #FFFFFF;
-            border: 2px solid #FDBA74; /* Orange border, like aged cheese rind */
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .movie-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #D97706; /* Amber color for titles */
-            margin-bottom: 8px;
-        }
-        .movie-details p {
-            margin-bottom: 6px;
-            color: #4B5563; /* Gray for details */
-        }
-        .movie-details strong {
-            color: #78350F; /* Brown for labels */
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FFFBEB;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #FDBA74;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FB923C;
-        }
-        /* Custom focus rings for accessibility and style */
-        input[type="text"]:focus, button:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.5); /* Orange glow */
-        }
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(120deg, #fcd34d, #f472b6, #60a5fa, #34d399);
+    background-size: 320% 320%;
+    animation: gradientFlow 25s ease infinite;
+    min-height: 100vh;
+    margin: 0;
+    color: #312e2a;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 26px;
+    box-shadow: 0 28px 60px rgba(31, 41, 55, 0.25);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+#chat-window {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 22px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    padding: 0.9rem 1.25rem;
+    border-radius: 22px;
+    margin-bottom: 0.35rem;
+    max-width: 100%;
+    width: fit-content;
+    color: #3b2f26;
+    background: rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    word-break: break-word;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-bubble:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
+}
+
+.user-bubble {
+    align-self: flex-end;
+    background: rgba(255, 196, 120, 0.42);
+    border-color: rgba(255, 214, 154, 0.7);
+}
+
+.bot-bubble {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.bot-bubble.error {
+    background: rgba(254, 202, 202, 0.65);
+    color: #7f1d1d;
+    border-color: rgba(254, 164, 164, 0.75);
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 20px;
+    padding: 1.25rem;
+    margin-top: 0.85rem;
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    overflow: hidden;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d97706;
+    margin-bottom: 0.5rem;
+}
+
+.movie-details {
+    display: grid;
+    gap: 0.4rem;
+    color: #4b5563;
+}
+
+.movie-details strong {
+    color: #78350f;
+}
+
+.movie-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-top: 1rem;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
+}
+
+#movie-input {
+    background: rgba(255, 255, 255, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    color: #2d2013;
+    padding: 0.85rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#movie-input::placeholder {
+    color: rgba(120, 53, 15, 0.55);
+}
+
+#movie-input:focus {
+    outline: none;
+    border-color: rgba(251, 191, 36, 0.8);
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.25);
+}
+
+#send-button {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.95), rgba(249, 115, 22, 0.95));
+    border: none;
+    border-radius: 16px;
+    color: #fffaf0;
+    font-weight: 600;
+    padding: 0.85rem 1.8rem;
+    box-shadow: 0 18px 32px rgba(249, 115, 22, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 40px rgba(234, 88, 12, 0.38);
+}
+
+#send-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.3);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(249, 115, 22, 0.65);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 115, 22, 0.8);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    .chat-bubble {
+        max-width: 92%;
+    }
+
+    #chat-window {
+        max-height: 22rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .chat-bubble {
+        width: 100%;
+    }
+
+    #chat-window {
+        padding: 1rem;
+    }
+
+    #send-button {
+        padding: 0.85rem 1.2rem;
+    }
+}
